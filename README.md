@@ -1,42 +1,25 @@
-![React-TimeAgo](http://naman.s3.amazonaws.com/react-timeago.png)
+![React-TimeAgo](http://naman.s3.amazonaws.com/react-time-ago.png)
 
-A simple time-ago component for ReactJs.
-
-## Changes in V3.X:
-
-- minPeriod and maxPeriod now accept seconds not milliseconds. This matches the documentation.
-- react-timeago now uses ES6 modules. So if you don't use ES6, your code will go from :
-```js
-var TimeAgo = require('react-timeago')
-```
-to:
-```js
-var TimeAgo = require('react-timeago').default
-```
-ES6 imports will obviously continue to work just fine:
-```js
-import TimeAgo from 'react-timeago'
-```
-
+A simple time-ago component for React.
 
 ## Usage:
 
-React-timeago is a very simple component that takes a date prop and returns a span with live updating date in a time-ago format. The date will update only as often as needed. For timestamps below a minute away — every second, for timestamps up to 5 minutes away — every hour, and so on.
+`react-time-ago` is a very simple component that takes a date prop and returns a span with live updating date in a time-ago format. The date will update only as often as needed. For timestamps below a minute away — every second, for timestamps up to 5 minutes away — every hour, and so on.
 
-React-TimeAgo does the minimum amount of updates necessary.
+React-Time-Ago does the minimum amount of updates necessary.
 
-```
-<TimeAgo date="Aug 29, 2014" />
+```js
+import TimeAgo from '@jshimko/react-time-ago';
+
+<TimeAgo date='Aug 29, 2014' />
 
 // OR in vanilla JS
-
-React.createElement(TimeAgo, {date: 'Aug 29, 2014'})
-
+React.createElement(TimeAgo, {date: 'Aug 29, 2014'});
 ```
 
 ## Language support
 
-Since v3.1.0 `react-timeago` now comes with support for a large number of languages out of the box.
+Since v3.1.0 `react-time-ago` now comes with support for a large number of languages out of the box.
 This support is based on the string objects taken from `jquery-timeago`
 
 #### Usage:
@@ -44,11 +27,11 @@ To use any of the languages provided, other than the default english, you will h
 import the language strings and build a custom formatter.
 
 ```js
-import TimeAgo from 'react-timeago'
-import frenchStrings from 'react-timeago/lib/language-strings/fr'
-import buildFormatter from 'react-timeago/lib/formatters/buildFormatter'
+import TimeAgo from '@jshimko/react-time-ago';
+import frenchStrings from '@jshimko/react-time-ago/lib/language-strings/fr';
+import buildFormatter from '@jshimko/react-time-ago/lib/formatters/buildFormatter';
 
-const formatter = buildFormatter(frenchStrings)
+const formatter = buildFormatter(frenchStrings);
 
 // in your react component
 <TimeAgo date='Feb 1, 1966' formatter={formatter} />
@@ -63,9 +46,9 @@ and pass them around.
 
 ## Flow Types
 
-Since v3.0.0 `react-timeago` comes with flow type definitions out of the box.
+Since v3.0.0 `react-time-ago` comes with flow type definitions out of the box.
 
-In v3.1.0, the React.PropType validations have been removed in favour of just flow types.
+In v3.1.0, the React.PropType validations have been removed in favor of just flow types.
 Further, many type definitions are now exported for use in your own code.
 
 Look through the source for more details.
@@ -103,7 +86,7 @@ Here are some examples of what the formatter function will receive:
 - '5 minutes ago' => formatter(5, 'minute', 'ago')
 - '1 year from now' => formatter(1, 'year', 'from now')
 
-The formatter function is a simple way to extend the functionality of React-Timeago to support any feature you may need from a fuzzy time display.
+The formatter function is a simple way to extend the functionality of React-Time-Ago to support any feature you may need from a fuzzy time display.
 The formatter function is expected to return a string.
 But it can also return any React component (or array of components) that would become the child of React-TimeAgo
 
@@ -151,7 +134,7 @@ While the code is complete and pretty stable, I welcome issues and pull requests
 
 React-TimeAgo is feature complete from my point of view. (discussions welcome)
 
-However, support for various languages can always be improved. So please, conrtibute
+However, support for various languages can always be improved. So please, contribute
 strings for the language(s) you're fluent in. I'm specifically looking for strings for
 the unit 'week'. `jquery-timeago` did not support weeks in its strings, and so in all but the
 default english, weeks get down-converted to days instead. Help me fix that.
@@ -161,6 +144,9 @@ default english, weeks get down-converted to days instead. Help me fix that.
 React-TimeAgo follows SemVer strictly.
 
 ## Changelog
+
+#### v4.0.0
+* Forked to @jshimko/react-time-ago
 
 #### v3.3.0
 * Added a new prop type that lets you replace Date.now with your own function. For server rendering.

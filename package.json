@@ -1,7 +1,7 @@
 {
-  "name": "react-timeago",
-  "version": "3.3.0",
-  "description": "A simple Time-Ago component for ReactJs",
+  "name": "@jshimko/react-time-ago",
+  "version": "4.0.0",
+  "description": "A simple Time-Ago component for React",
   "main": "lib/index.js",
   "scripts": {
     "cpflow": "find ./src -name '*.js' -not -path '*/__*' | while read filepath; do cp $filepath `echo $filepath | sed 's/\\/src\\//\\/lib\\//g'`.flow; done",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/naman34/react-timeago.git"
+    "url": "https://github.com/jshimko/react-time-ago.git"
   },
   "keywords": [
     "React",
@@ -27,12 +27,12 @@
     "TimeAgo",
     "ender"
   ],
-  "author": "Naman Goel",
+  "author": "Jeremy Shimko",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nmn/react-timeago/issues"
+    "url": "https://github.com/jshimko/react-time-ago/issues"
   },
-  "homepage": "https://github.com/nmn/react-timeago",
+  "homepage": "https://github.com/jshimko/react-time-ago",
   "peerDependencies": {
     "react": "^15.0.0"
   },
