@@ -2,8 +2,8 @@ import test from 'ava'
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import TimeAgo from '../src'
-import buildFormatter from '../src/formatters/buildFormatter'
+import TimeAgo from '../lib'
+// import buildFormatter from '../src/formatters/buildFormatter'
 // import TWStrings from '../src/language-strings/zh-TW'
 
 test('just now', t => {
