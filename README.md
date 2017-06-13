@@ -2,6 +2,8 @@
 
 A simple time-ago component for React.
 
+[![CircleCI](https://circleci.com/gh/jshimko/react-time-ago.svg?style=svg)](https://circleci.com/gh/jshimko/react-time-ago)
+
 ## Usage:
 
 `react-time-ago` is a very simple component that takes a date prop and returns a span with live updating date in a time-ago format. The date will update only as often as needed. For timestamps below a minute away — every second, for timestamps up to 5 minutes away — every hour, and so on.
