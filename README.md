@@ -1,6 +1,6 @@
-![React-TimeAgo](http://naman.s3.amazonaws.com/react-time-ago.png)
+# React Time Ago
 
-A simple time-ago component for React.
+A reactive time-ago component for React.
 
 [![CircleCI](https://circleci.com/gh/jshimko/react-time-ago.svg?style=svg)](https://circleci.com/gh/jshimko/react-time-ago)
 
